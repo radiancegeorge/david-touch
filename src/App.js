@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './component/header';
+import Hero from './component/hero';
+import firstSectionBackground from './img/WhatsApp Image 2021-06-01 at 20.47.30 (1).jpeg';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="first-layer" style={{backgroundImage:`url("${firstSectionBackground}")`, backgroundSize: "100%"}}>
+      <Header />
+      <Hero />
+     </div>
     </div>
   );
 }
