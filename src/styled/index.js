@@ -29,12 +29,24 @@ export const HeaderWrap = styled.header`
         }
     }
     @media ${devices.mobile}{
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        display: none;
         & > nav{
-            width: ${max_width + 10}%!imporatant;
-            height: 100vh;
+            width: 100%;
+            height: fit-content;
             display: block;
+            margin: initial;
+            a{
+                padding: 20px;
+                transition: 0.3s;
+                &:hover{
+                    color: #F2E635;
+                }
+            }
             & > .logo{
-                width: 288px;
+                width: 188px;
                 position: static;
                 & > img {
                     width: 100%;
@@ -54,8 +66,8 @@ export const Link = styled.a`
 `;
 
 export const HeroSection = styled.div`
-    &  .hero{
-        margin-top: 102px;
+    & .hero{
+        padding-top: 102px;
         padding-bottom: 300px;
         & > .wrap{
             max-width: ${max_width}%;
@@ -98,6 +110,33 @@ export const HeroSection = styled.div`
             }
         }
     }
+    @media ${devices.mobile}{
+        & .hero{
+            padding-bottom: 100px;
+            & > .wrap{
+                max-width: ${max_width}%;
+                margin: auto;
+                .home-text{
+                    font-size: 56px;
+                    position: absolute;
+                    left: -30px;
+                    bottom: 570px;
+                }
+                .jumbotron{
+                    color: white;
+                    font-size: 24px;
+                    max-width: 512px;
+                    h1{
+                        font-weight: 800;
+                        line-height: 38px;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
 `;
 
 export const AboutWrap = styled.div`
@@ -129,6 +168,25 @@ export const AboutWrap = styled.div`
             text-align: right;
             margin-left: auto;
             color: #A6A297;
+        }
+    }
+    @media ${devices.mobile} {
+        margin: 5px 0;
+        .wrap{
+            max-width: calc(${max_width}%);
+            padding: 47px;
+            .about-header{
+                left: -80px;
+                top: 250px;
+                .header{
+                    font-size: 56px;
+                }
+            }
+            
+            .about-text{
+                font-weight: 600;
+                font-size: 18px;
+            }
         }
     }
 `;
