@@ -63,12 +63,15 @@ const Footer = ()=> {
                         </table>
                     </div>
                     <div>
-                        <div className="header" id="#appointment"><h3>Book an appointment</h3></div>
+                        <div className="header" id="#appointment"><h3>LEAVE A MESSAGE</h3></div>
                         <form action="">
                             <label htmlFor="email">
                                 <input type="email" placeholder="Email" />
                             </label>
-                            <button type="submit">Book</button>
+                            <label htmlFor="message">
+                                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                            </label>
+                            <button type="submit">Send</button>
                         </form>
                     </div>
                 </div>

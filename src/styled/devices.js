@@ -1,4 +1,6 @@
 export const devices = {
-    mobile: ` (max-width: 600px)`,
-    tablets: `(max-width: 1024px)`
+    mobileM: ` (max-width: 1024px)`,
+    mobileS: ` (max-width: 360px) `,
+    tabletS: `(min-width: 500px)`,
+    tabletM: `(max-width: 1100px)`
 }

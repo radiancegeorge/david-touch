@@ -5,3 +5,6 @@
   font-family: raleway;
   scroll-behavior: smooth;
 }
+html, body{
+  overflow-x: hidden!important;
+}
