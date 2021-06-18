@@ -2,7 +2,7 @@ const config = {
     navItems: [
         {
             name: "Home",
-            link: "/home"
+            link: "/"
         },
         {
             name: "About",

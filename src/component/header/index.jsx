@@ -1,10 +1,16 @@
 import { HeaderWrap, Link } from "../../styled";
 import config from '../../utils/config';
-import {Fragment, useState} from 'react';
+import {Fragment, useEffect, useState} from 'react';
 import firstSectionBackground from '../../img/WhatsApp Image 2021-06-01 at 20.47.30 (1).jpeg'; 
 import { BiMenu } from 'react-icons/all'
+import Aos from "aos";
 
 const Header = ( ) => {
+    useEffect(()=> {
+        Aos.init({
+            duration: 1000,
+        })
+    }, [])
     const [hiddenLink, setHiddenLink] = useState();
     const toggleLinkDisplay = () => {
         setHiddenLink(!hiddenLink)
@@ -12,6 +18,7 @@ const Header = ( ) => {
     return(
         <div className="header-section">
             <HeaderWrap linkDisplay={hiddenLink}>
+                <div className="overlay"></div>
             <img src={firstSectionBackground} alt="img" width="100%" className="blur-bg"/>
                 <nav>
                     <div className="logo">
@@ -21,9 +28,10 @@ const Header = ( ) => {
                     {
                         config.navItems.map( (item, idx) => {
                             const {name, link} = item;
+                            const isEven = idx % 2 === 0 ? true : false;
                             return(
                                 <Fragment key={idx}>
-                                    <Link nav={true} href={link}> {name} </Link>
+                                    <Link nav={true} href={link} data-aos={`fade-${isEven ? "up" : "down"}`}> {name} </Link>
                                 </Fragment>
                             )
                         })

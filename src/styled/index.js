@@ -7,6 +7,15 @@ export const HeaderWrap = styled.header`
     width: 100vw;
     position: relative;
     overflow-y: hidden;
+    .overlay{
+        background-color: black;
+        width: 100%;
+        min-height: 150%;
+        position: absolute;
+        opacity: 0.5;
+        z-index: 1;
+        pointer-events: none;
+    }
     .blur-bg{
         position: absolute;
         filter: blur(8px)
@@ -80,6 +89,13 @@ export const Link = styled.a`
 `;
 
 export const HeroSection = styled.div`
+    .overlay{
+        background-color: black;
+        width: 100%;
+        min-height: 150%;
+        position: absolute;
+        opacity: 0.5;
+    }
     & .hero{
         padding-top: 102px;
         padding-bottom: 300px;
@@ -220,7 +236,7 @@ export const AboutWrap = styled.div`
             max-width: calc(${max_width}% - 30px);
             padding: 47px;
             .about-header{
-                left: -70px;
+                left: -80px;
                 top: 210px;
                 .header{
                     font-size: 56px;
@@ -280,6 +296,7 @@ export const GalleryWrap = styled.div`
                 flex-basis: 30%;
                 margin: 10px;
                 height: fit-content!important;
+                position: relative;
                 img{
                     width: 100%!important;
                 }
