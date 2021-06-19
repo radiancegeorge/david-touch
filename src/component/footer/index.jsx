@@ -1,15 +1,15 @@
 import { FooterWrap } from "../../styled";
 import photo1 from '../../img/manik-roy-zOa49U1gZHc-unsplash.png'
-import photo2 from '../../img/jay-heike-Ho-QHf3kqIc-unsplash.png'
-import photo3 from '../../img/nathon-oski-EW_rqoSdDes-unsplash.png'
+import photo2 from '../../img/WhatsApp Image 2021-06-01 at 20.48.04.jpeg'
+// import photo3 from '../../img/nathon-oski-EW_rqoSdDes-unsplash.png'
 const Footer = ()=> {
     return(
         <FooterWrap>
             <div className="wrap">
                 <div className="footer-photos">
                     <img src={photo1} alt="photo1" />
-                    <img src={photo2} alt="photo2" />
-                    <img src={photo3} alt="photo3" />
+                    <img src={photo2} alt="photo2"/>
+                    {/* <img src={photo3} alt="photo3" /> */}
                 </div>
                 <div className="footer-text-area">
                     <div>
@@ -37,7 +37,7 @@ const Footer = ()=> {
                             <tbody>
                                 <tr>
                                     <td>Address</td>
-                                    <td>A2, 4 Salt Lake Street, maitama, Abuja, Nigeria Social media handles</td>
+                                    <td>A2, 4 Salt Lake Street, maitama, Abuja</td>
                                 </tr>
                                 <tr>
                                     <td>Phone </td>

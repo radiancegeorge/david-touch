@@ -14,6 +14,7 @@ const Gallery = () => {
     }, [])
     return(
         <GalleryWrap style={{backgroundImage: `url("${overlay}")`, backgroundSize: "cover"}}>
+            <div className="overlay"></div>
             <div className="wrap">
                 <div className="gallery-header" id="gallery">
                     <h1 className="header"> GALLERY</h1>

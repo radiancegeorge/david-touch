@@ -28,6 +28,11 @@ export const HeaderWrap = styled.header`
         margin: auto;
         justify-content: center;
         position: relative;
+        a{
+            &:hover{
+                color: yellow;
+            }
+        }
         & > .logo{
             width: 188px;
             margin-right: auto;
@@ -121,14 +126,16 @@ export const HeroSection = styled.div`
                     line-height: 88px;
                 }
                 a{
-                    color: white;
+                    color: black;
                     font-size: 14px;
                     font-weight: 800;
-                    border: 1px solid white;
+                    border: 1px solid yellow;
                     width: fit-content;
                     padding: 16px 28px;
                     margin-top: 28px;
                     border-radius: 4px;
+                    background-color: yellow;
+                    
                 }
                 p{
                     font-size: 16px;
@@ -204,67 +211,86 @@ export const AboutWrap = styled.div`
     position: relative;
     margin: 10px 0;
     padding: 60px 0;
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.08;
+    }
+    .about-header{
+        color: #F2F2F2;
+        position: absolute;
+        transform: rotateZ(-90deg);
+        left: -150px;
+        top: 250px;
+        .header{
+            font-weight: 100;
+            font-size: 96px;
+        }
+    }
     .wrap{
-        background-color: #D6D5E5;
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
         max-width: calc(${max_width}% + 80px);
         margin-left: auto;
         padding: 67px;
         border-radius: 11px 0px 0px 11px;
-        .about-header{
-            color: #F2F2F2;
-            position: absolute;
-            transform: rotateZ(-90deg);
-            left: -160px;
-            top: 250px;
-            .header{
-            font-weight: 100;
-            font-size: 96px;
-            }
-        }
-        
         .about-text{
             font-weight: 600;
             font-size: 32px;
-            text-align: right;
+            text-align: left;
             margin-left: auto;
-            color: #A6A297;
+            color: white;
         }
     }
     @media ${devices.mobileM} {
         margin: 5px 0;
         .wrap{
             max-width: calc(${max_width}% - 30px);
-            padding: 47px;
-            .about-header{
-                left: -80px;
-                top: 210px;
-                .header{
-                    font-size: 56px;
-                }
-            }
+            padding: 47px 47px 47px 0px;
             .about-text{
                 font-weight: 700;
                 font-size: 16px;
             }
         }
+        .about-header{
+            left: -90px;
+            top: 210px;
+            .header{
+                font-size: 56px;
+            }
+        }
     }
     @media ${devices.mobileS} {
         .wrap{
-            padding: 27px;
-            .about-header{
-                left: -60px;
-                .header{
-                    font-size: 46px;
-                }
-            }
+            padding: 20px 20px 20px 0;
+            
             .about-text{
                 font-size: 14px;
+            }
+        }
+        .about-header{
+            left: -70px;
+            .header{
+                font-size: 46px;
             }
         }
     }
 `;
 
 export const GalleryWrap = styled.div`
+    .overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: grey;
+        top: 0;
+        filter: blur(8px);
+        opacity: 0.5;
+    }
     filter: grayscale(100%);
     position: relative;
     overflow: hidden;
@@ -279,14 +305,12 @@ export const GalleryWrap = styled.div`
             left: -130px;
             top: 50%;
             .header{
-            font-weight: 100;
-            font-size: 96px;
+                font-weight: 100;
+                font-size: 96px;
+                color: black;
             }
         }
-        .header{
-            font-weight: 100;
-            font-size: 96px;
-        }
+        
         .content-wrap{
             display: flex;
             flex-wrap: wrap;
@@ -354,7 +378,7 @@ export const FooterWrap = styled.footer`
             align-items: center;
             justify-content: space-around;
             img{
-                flex-basis: 30%;
+                width: 30%;
                 mix-blend-mode: lighten;
                 padding: 5%;
             }
@@ -371,6 +395,7 @@ export const FooterWrap = styled.footer`
             }
             h3{
                 text-align: center;
+                color: yellow;
             }
             & > div{
                 flex-basis: 30%;
